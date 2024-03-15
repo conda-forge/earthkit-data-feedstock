@@ -10,7 +10,7 @@ source:
   sha256: fa4de1704056874e0b501084229a43c9fbe4efbabf655f3604e6bae0e29d387b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -22,6 +22,7 @@ requirements:
   run:
     - cfgrib >=0.9.10.1
     - dask
+    - eccodes >=2.34.1
     - entrypoints
     - filelock
     - jinja2
@@ -29,7 +30,7 @@ requirements:
     - pandas
     - pdbufr
     - python >=3.8
-    - python-eccodes
+    - python-eccodes >=1.7.0
     - pyyaml
     - requests
     - tqdm
