@@ -22,19 +22,22 @@ requirements:
   run:
     - cfgrib >=0.9.10.1
     - dask
+    - earthkit-geo >=0.2
     - eccodes >=2.35.0
     - entrypoints
     - filelock
     - jinja2
+    - jsonschema
+    - markdown
     - netcdf4
     - pandas
-    - pdbufr
+    - pdbufr >=0.11
     - python >=3.8
     - python-eccodes >=1.7.0
     - pyyaml
     - requests
-    - tqdm
-    - xarray
+    - tqdm >=4.63
+    - xarray >=0.19
 
 test:
   imports:
