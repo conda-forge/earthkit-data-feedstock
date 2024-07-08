@@ -1,5 +1,5 @@
 {% set name = "earthkit-data" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 27d3d5898da5129c5e4299be0977eb9875604577af096253d8550b65ac650351
+  sha256: d2ed5ace4ff95a0ba5e39743ee82698b94785c84e2f9a2f1069f7c08a8f2d91c
 
 build:
   number: 0
@@ -22,19 +22,22 @@ requirements:
   run:
     - cfgrib >=0.9.10.1
     - dask
+    - earthkit-geo >=0.2
     - eccodes >=2.35.0
     - entrypoints
     - filelock
     - jinja2
+    - jsonschema
+    - markdown
     - netcdf4
     - pandas
-    - pdbufr
+    - pdbufr >=0.11
     - python >=3.8
     - python-eccodes >=1.7.0
     - pyyaml
     - requests
-    - tqdm
-    - xarray
+    - tqdm >=4.63
+    - xarray >=0.19
 
 test:
   imports:
