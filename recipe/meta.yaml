@@ -10,7 +10,7 @@ source:
   sha256: cb7051c410120e918963414c53c39719ee07990c7e4e004003cc24792107eeb1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -28,6 +28,7 @@ requirements:
     - filelock
     - jinja2
     - jsonschema
+    - lru-dict
     - markdown
     - netcdf4
     - pandas
