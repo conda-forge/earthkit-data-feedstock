@@ -20,6 +20,7 @@ requirements:
     - pip
     - pytest-runner
   run:
+    - array-api-compat
     - cfgrib >=0.9.10.1
     - dask
     - earthkit-geo >=0.2
@@ -30,6 +31,7 @@ requirements:
     - jsonschema
     - lru-dict
     - markdown
+    - multiurl
     - netcdf4
     - pandas
     - pdbufr >=0.11
