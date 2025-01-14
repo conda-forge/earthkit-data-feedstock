@@ -10,13 +10,13 @@ source:
   sha256: be54fd70e687474cb570f176a2cbd9c6bad08e7a328426bdd606dce49044e227
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - pytest-runner
   run:
@@ -35,7 +35,7 @@ requirements:
     - netcdf4
     - pandas
     - pdbufr >=0.11
-    - python >=3.8
+    - python >={{ python_min }}
     - python-eccodes >=1.7.0
     - pyyaml
     - requests
@@ -43,6 +43,8 @@ requirements:
     - xarray >=0.19
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - earthkit.data
 
