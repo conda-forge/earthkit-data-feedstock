@@ -53,7 +53,7 @@ about:
   home: https://github.com/ecmwf/earthkit-data
   license: Apache-2.0
   license_family: Apache
-  license_file: LICENSE
+  license_file: LICENCE
   summary: A format-agnostic interface for geospatial data with a focus on meteorology and climate science.
   doc_url: https://earthkit-data.readthedocs.io/en/latest/
   dev_url: https://github.com/ecmwf/earthkit-data
