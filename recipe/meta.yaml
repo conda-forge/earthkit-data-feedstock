@@ -25,6 +25,7 @@ requirements:
     - dask
     - deprecation
     - earthkit-geo >=0.2
+    - earthkit-utils
     - eccodes >=2.35.0
     - entrypoints
     - filelock
