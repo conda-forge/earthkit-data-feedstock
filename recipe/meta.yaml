@@ -1,5 +1,5 @@
 {% set name = "earthkit-data" %}
-{% set version = "0.13.8" %}
+{% set version = "0.14.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 092c8e30d2ca85b37216ec191a0a42cf4d9405e26eb685b9ab33efc25b833562
+  sha256: d61d8385ab7fea7cd2829faf229a573954d846f5cdd424d2a3ad41b08a1bf997
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - dask
     - deprecation
     - earthkit-geo >=0.2
+    - earthkit-utils
     - eccodes >=2.35.0
     - entrypoints
     - filelock
@@ -53,7 +54,7 @@ about:
   home: https://github.com/ecmwf/earthkit-data
   license: Apache-2.0
   license_family: Apache
-  license_file: LICENSE
+  license_file: LICENCE
   summary: A format-agnostic interface for geospatial data with a focus on meteorology and climate science.
   doc_url: https://earthkit-data.readthedocs.io/en/latest/
   dev_url: https://github.com/ecmwf/earthkit-data
