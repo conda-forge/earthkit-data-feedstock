@@ -1,5 +1,5 @@
 {% set name = "earthkit-data" %}
-{% set version = "0.14.4" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: d3d5d7b920b57a4abdbfc3add56bf167bb2d1eec151b6f6d36abea766b06929a
+  sha256: 70babe1aff25887cea75def77be93250413ca240220c40ff9e6708c641de6030
 
 build:
   number: 0
