@@ -19,6 +19,8 @@ requirements:
     - python {{ python_min }}
     - pip
     - pytest-runner
+    - setuptools >=61
+    - setuptools-scm >=8
   run:
     - array-api-compat
     - cfgrib >=0.9.10.1
