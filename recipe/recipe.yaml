@@ -1,0 +1,72 @@
+schema_version: 1
+
+context:
+  version: "1.2.3"
+
+package:
+  name: earthkit-data
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/e/earthkit-data/earthkit_data-${{ version }}.tar.gz
+  sha256: 89fe3e67dbb3f3291eae7d1d57e6574dd7cc33b2ac77fe4f62c251b70f9adbcc
+  patches:
+    # These deps are mandatory in the metadata, but seems to be optional in the code.
+    - optional-deps.patch
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=77
+    - setuptools-scm >=8
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - cfgrib >=0.9.10.1
+    - dask-core
+    - deprecation
+    - earthkit-utils >=1.0,<2.dev0
+    - python-eccodes >=2.47.0
+    # Both sources are unavailable from PyPI.
+    # - eccodeslib ==2.47.3.21
+    # - eckit ==2.1.0.21
+    - entrypoints
+    - filelock
+    - jinja2
+    - jsonschema
+    - lru-dict
+    - markdown
+    - multiurl >=0.3.3
+    - netcdf4
+    - pandas
+    - pdbufr >=0.11
+    - pyyaml
+    - tqdm >=4.63
+    - xarray >=0.19
+
+tests:
+  - python:
+      imports:
+        - earthkit
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: A format-agnostic Python interface for geospatial data
+  license: Apache-2.0
+  license_file: LICENCE
+  homepage: https://github.com/ecmwf/earthkit-data/
+  documentation: https://earthkit-data.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - sandorkertesz
+    - iainrussell
+    - JamesVarndell
