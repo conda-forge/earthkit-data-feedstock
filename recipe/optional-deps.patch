@@ -1,0 +1,22 @@
+--- earthkit_data-1.2.3.orig/pyproject.toml	2026-09-21 04:37:37.083419561 -0300
++++ earthkit_data-1.2.3/pyproject.toml	2026-09-22 09:53:35.403213278 -0300
+@@ -24,8 +24,6 @@
+   "deprecation",
+   "earthkit-utils~=1.0",
+   "eccodes>=2.47.0",
+-  "eccodeslib==2.47.3.21",
+-  "eckit==2.1.0.21",
+   "entrypoints",
+   "filelock",
+   "jinja2",
+@@ -40,6 +38,10 @@
+   "tqdm>=4.63",
+   "xarray>=0.19"
+ ]
++optional-dependencies.extras = [
++  "eccodeslib==2.47.3.21",
++  "eckit==2.1.0.21",
++]
+ description = "A format-agnostic Python interface for geospatial data"
+ dynamic = ["version"]
+ entry-points."xarray.backends".earthkit = "earthkit.data.xr_engine.engine:EarthkitBackendEntrypoint"
