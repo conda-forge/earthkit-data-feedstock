@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.2.3"
+  version: "1.2.4"
 
 package:
   name: earthkit-data
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/e/earthkit-data/earthkit_data-${{ version }}.tar.gz
-  sha256: 89fe3e67dbb3f3291eae7d1d57e6574dd7cc33b2ac77fe4f62c251b70f9adbcc
+  sha256: 357678b2fa8ceeb5cefb047ec29a66ba72c5239744450f10ba2cb789a14b800f
   patches:
     # These deps are mandatory in the metadata, but seems to be optional in the code.
     - optional-deps.patch
